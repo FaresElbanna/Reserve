@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TableTime | Reserve Your Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .toggle-switch {
+      width: 50px;
+      height: 26px;
+      background: #ccc;
+      border-radius: 9999px;
+      position: relative;
+      cursor: pointer;
+    }
+    .toggle-thumb {
+      width: 22px;
+      height: 22px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: all 0.3s ease;
+    }
+    .dark .toggle-thumb {
+      left: 26px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+  <!-- Header with toggle -->
+  <header class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow-md">
+    <h1 class="text-2xl font-bold text-yellow-500">TableTime</h1>
+    <div onclick="toggleDarkMode()" class="toggle-switch">
+      <div class="toggle-thumb"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-[url('https://source.unsplash.com/1600x900/?restaurant,dining')] bg-cover bg-center flex items-center justify-center text-white text-center px-6 relative">
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl max-w-2xl">
+      <h2 class="text-4xl font-bold mb-4">Book a Table in Seconds</h2>
+      <p class="text-lg mb-6">Instant reservations. No waiting. No hassle.</p>
+      <a href="#reserve" class="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg transition">Reserve Now</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 bg-yellow-50 dark:bg-gray-800 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Why TableTime?</h2>
+      <div class="grid md:grid-cols-3 gap-10 text-left">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-500">Instant Booking</h3>
+          <p>Book your favorite place in just a few clicks.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-500">Top Rated Spots</h3>
+          <p>Access hand-picked, highly rated restaurants.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-500">Free & Reliable</h3>
+          <p>No booking fees. Always free and secure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-20 bg-white dark:bg-gray-900 px-6" id="photos">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 text-yellow-500">Our Dining Spaces</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="image1.jpg" class="rounded-xl object-cover w-full h-48 shadow-lg">
+        <img src="image1 (1).jpg" class="rounded-xl object-cover w-full h-48 shadow-lg">
+        <img src="image1 (2).jpg" class="rounded-xl object-cover w-full h-48 shadow-lg">
+        <img src="image1 (1).webp" class="rounded-xl object-cover w-full h-48 shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20 bg-yellow-100 dark:bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-yellow-600">1. Choose</h3>
+          <p class="text-gray-700 dark:text-gray-300">Pick your restaurant based on location or cuisine.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-yellow-600">2. Select Time</h3>
+          <p class="text-gray-700 dark:text-gray-300">See real-time slots and book your table instantly.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2 text-yellow-600">3. Show Up</h3>
+          <p class="text-gray-700 dark:text-gray-300">Enjoy your meal—your table is waiting for you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Form -->
+  <section id="reserve" class="py-20 bg-yellow-200 dark:bg-gray-700 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-yellow-400">Reserve a Table</h2>
+      <p class="mb-6 text-lg text-gray-700 dark:text-gray-200">Tell us where and when—it's that easy.</p>
+      <form class="grid grid-cols-1 gap-4 max-w-xl mx-auto text-left">
+        <input type="text" placeholder="Your Name" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+        <input type="email" placeholder="Email Address" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+        <input type="text" placeholder="Restaurant Name" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+        <div class="grid grid-cols-2 gap-4">
+          <input type="date" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+          <input type="time" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+        </div>
+        <input type="number" placeholder="Guests" class="p-3 border rounded-lg bg-white dark:bg-gray-600 dark:text-white" required />
+        <button class="bg-black dark:bg-yellow-500 dark:text-black text-white py-3 rounded-lg hover:opacity-90 transition">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-gray-900 dark:bg-black text-white text-center">
+    <p class="text-lg">© 2025 TableTime. All rights reserved.</p>
+    <p class="text-sm mt-2">Contact: support@tabletime.com | +1 234 567 890</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
